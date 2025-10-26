@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Editor</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1 id="pageTitle">Form Editor</h1>
+
+    <input type="text" id="formTitle" placeholder="Form Title">
+    <textarea id="formDescription" placeholder="Form Description"></textarea>
+
+    <h2>Add Field</h2>
+    <div class="field-buttons">
+        <button onclick="addField('short_text')">Short Text</button>
+        <button onclick="addField('paragraph')">Paragraph</button>
+        <button onclick="addField('multiple_choice')">Multiple Choice</button>
+        <button onclick="addField('checkbox')">Checkbox</button>
+        <button onclick="addField('dropdown')">Dropdown</button>
+        <button onclick="addField('number')">Number</button>
+        <button onclick="addField('date')">Date</button>
+    </div>
+
+    <h2>Customize Fields</h2>
+    <div id="fieldsContainer"></div>
+
+    <button id="saveFormBtn" onclick="saveForm()">Save Form</button>
+
+    <h2>Live Preview</h2>
+    <div id="previewContainer"></div>
+</div>
+
+<script src="./assets/js/api.js"></script>
+<script src="./assets/js/app.js"></script>
+<script src="./assets/js/popup.js"></script>
+<script src="./assets/js/editor.js"></script>
+</body>
+</html>
